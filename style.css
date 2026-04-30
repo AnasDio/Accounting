@@ -247,6 +247,7 @@ tfoot td {
   gap: 15px;
   justify-content: center;
   margin-top: 30px;
+  overflow-x: auto;
 }
 
 tfoot h2 {
