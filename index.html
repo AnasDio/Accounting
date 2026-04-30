@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounting Ledger System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ledger-container">
+      <header class="ledger-header">
+        <div class="brand">
+          <h1>General Ledger</h1>
+          <p>Financial Records System</p>
+        </div>
+      </header>
+
+      <main class="ledger-main">
+        <div class="table-wrapper">
+          <table id="journal-table">
+            <thead>
+              <tr>
+                <th class="col-date">Date</th>
+                <th class="col-code">Code</th>
+                <th class="col-name">Account Name</th>
+                <th class="col-dr">Dr</th>
+                <th class="col-cr">Cr</th>
+                <th class="col-journal">Journal No.</th>
+                <th class="col-explanation">Explanation</th>
+                <th class="col-cost">Cost Centre</th>
+                <th class="col-type">Type of Account</th>
+                <th class="col-numerical">Numerical</th>
+              </tr>
+            </thead>
+            <tbody id="journal-body"></tbody>
+            <tfoot>
+              <tr id="ledger-totals-row">
+                <td colspan="3">TOTALS</td>
+                <td id="ledger-total-dr">0</td>
+                <td id="ledger-total-cr">0</td>
+                <td colspan="5"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="actions">
+          <button id="add-row-btn" class="btn-primary">Add New Line</button>
+        </div>
+        <h2 class="section-title" style="padding-left: 10px">Trial Balance</h2>
+        <div class="table-container">
+          <table id="trial-balance-table">
+            <thead>
+              <tr>
+                <th rowspan="2">CODE</th>
+                <th rowspan="2">ACCOUNT NAME</th>
+                <th colspan="2">BEGINNING OF YEAR</th>
+                <th colspan="2">MOVEMENT THROUGH THE YEAR</th>
+                <th colspan="2">TRIAL BALANCE BY TOTALS</th>
+                <th colspan="2">TRIAL BALANCE BY BALANCES</th>
+              </tr>
+              <tr>
+                <th>DR</th>
+                <th>CR</th>
+                <th>DR</th>
+                <th>CR</th>
+                <th>DR</th>
+                <th>CR</th>
+                <th>DR</th>
+                <th>CR</th>
+              </tr>
+            </thead>
+            <tbody id="trial-balance-body"></tbody>
+            <tfoot>
+              <tr id="tb-totals-row">
+                <td colspan="8">TOTAL BALANCES</td>
+                <td id="tb-total-dr">0</td>
+                <td id="tb-total-cr">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div id="last-table">
+          <h2>Income Statement</h2>
+          <div class="financial-container">
+            <table id="income-statement-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Account Name</th>
+                  <th>Dr</th>
+                  <th>Cr</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="income-body"></tbody>
+            </table>
+            <div class="summary-box">
+              <p>
+                Revenues: <span id="summary-revenue" class="bg-green">0</span>
+              </p>
+              <p>
+                Expenses: <span id="summary-expenses" class="bg-red">0</span>
+              </p>
+              <p>Net Income: <span id="summary-net-income">0</span></p>
+            </div>
+          </div>
+
+          <h2>Balance Sheet</h2>
+          <div class="financial-container">
+            <table id="balance-sheet-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Account Name</th>
+                  <th>Dr</th>
+                  <th>Cr</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="balance-body"></tbody>
+            </table>
+            <div class="summary-box">
+              <p>Total Assets: <span id="summary-assets">0</span></p>
+              <p>Total Liabilities: <span id="summary-liabilities">0</span></p>
+              <p>Equity: <span id="summary-equity">0</span></p>
+              <p>Net Income: <span id="summary-bs-net-income">0</span></p>
+              <hr />
+              <p>
+                <strong
+                  >Total Equity:
+                  <span id="summary-total-equity">0</span></strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
