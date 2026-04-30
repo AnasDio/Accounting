@@ -252,3 +252,4 @@ tfoot td {
 tfoot h2 {
   padding-left: 10px;
 }
+.table-container{overflow-x: auto;}
